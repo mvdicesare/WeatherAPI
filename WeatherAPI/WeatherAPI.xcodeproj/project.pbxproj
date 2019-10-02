@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A52ABE23453F8500700778 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A52ABD23453F8500700778 /* WeatherViewController.swift */; };
 		26BFE9C423451A9000E2795E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFE9C323451A9000E2795E /* AppDelegate.swift */; };
 		26BFE9C623451A9000E2795E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFE9C523451A9000E2795E /* SceneDelegate.swift */; };
-		26BFE9C823451A9000E2795E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFE9C723451A9000E2795E /* ViewController.swift */; };
 		26BFE9CB23451A9000E2795E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BFE9C923451A9000E2795E /* Main.storyboard */; };
 		26BFE9CD23451A9100E2795E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BFE9CC23451A9100E2795E /* Assets.xcassets */; };
 		26BFE9D023451A9100E2795E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BFE9CE23451A9100E2795E /* LaunchScreen.storyboard */; };
+		26BFE9DB23451C9700E2795E /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFE9DA23451C9700E2795E /* WeatherModel.swift */; };
+		26BFE9DD2345242600E2795E /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFE9DC2345242600E2795E /* WeatherController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26A52ABD23453F8500700778 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		26BFE9C023451A9000E2795E /* WeatherAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BFE9C323451A9000E2795E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26BFE9C523451A9000E2795E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		26BFE9C723451A9000E2795E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		26BFE9CA23451A9000E2795E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26BFE9CC23451A9100E2795E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26BFE9CF23451A9100E2795E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26BFE9D123451A9100E2795E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26BFE9DA23451C9700E2795E /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		26BFE9DC2345242600E2795E /* WeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		26BFE9C223451A9000E2795E /* WeatherAPI */ = {
 			isa = PBXGroup;
 			children = (
+				26BFE9D923451C7A00E2795E /* Controller */,
+				26BFE9D823451C7200E2795E /* model */,
+				26BFE9D723451C2800E2795E /* SupportingDocuments  */,
+				26BFE9C923451A9000E2795E /* Main.storyboard */,
+			);
+			path = WeatherAPI;
+			sourceTree = "<group>";
+		};
+		26BFE9D723451C2800E2795E /* SupportingDocuments  */ = {
+			isa = PBXGroup;
+			children = (
 				26BFE9C323451A9000E2795E /* AppDelegate.swift */,
 				26BFE9C523451A9000E2795E /* SceneDelegate.swift */,
-				26BFE9C723451A9000E2795E /* ViewController.swift */,
-				26BFE9C923451A9000E2795E /* Main.storyboard */,
 				26BFE9CC23451A9100E2795E /* Assets.xcassets */,
 				26BFE9CE23451A9100E2795E /* LaunchScreen.storyboard */,
 				26BFE9D123451A9100E2795E /* Info.plist */,
 			);
-			path = WeatherAPI;
+			path = "SupportingDocuments ";
+			sourceTree = "<group>";
+		};
+		26BFE9D823451C7200E2795E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				26BFE9DA23451C9700E2795E /* WeatherModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		26BFE9D923451C7A00E2795E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26BFE9DC2345242600E2795E /* WeatherController.swift */,
+				26A52ABD23453F8500700778 /* WeatherViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26BFE9C823451A9000E2795E /* ViewController.swift in Sources */,
 				26BFE9C423451A9000E2795E /* AppDelegate.swift in Sources */,
+				26A52ABE23453F8500700778 /* WeatherViewController.swift in Sources */,
+				26BFE9DB23451C9700E2795E /* WeatherModel.swift in Sources */,
+				26BFE9DD2345242600E2795E /* WeatherController.swift in Sources */,
 				26BFE9C623451A9000E2795E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B35K2XL3AM;
-				INFOPLIST_FILE = WeatherAPI/Info.plist;
+				INFOPLIST_FILE = "WeatherAPI/SupportingDocuments /Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B35K2XL3AM;
-				INFOPLIST_FILE = WeatherAPI/Info.plist;
+				INFOPLIST_FILE = "WeatherAPI/SupportingDocuments /Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

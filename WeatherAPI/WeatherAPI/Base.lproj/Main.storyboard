@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRL-VY-q7N">
+                                <rect key="frame" x="41.5" y="44" width="331" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSW-KS-10I">
+                                <rect key="frame" x="124" y="222" width="166" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ip-2c-rOo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-xd-iWd">
+                                <rect key="frame" x="12" y="307" width="390" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ytl-zm-W4D">
+                                <rect key="frame" x="143" y="86" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ytl-zm-W4D" secondAttribute="height" multiplier="1:1" id="Jkh-R4-o4z"/>
+                                    <constraint firstAttribute="height" constant="128" id="Y3g-aP-VNC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x3X-xd-iWd" firstAttribute="top" secondItem="PSW-KS-10I" secondAttribute="bottom" constant="55" id="4PW-sC-Sly"/>
+                            <constraint firstItem="WRL-VY-q7N" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7zo-Tl-HA3"/>
+                            <constraint firstItem="PSW-KS-10I" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="8yY-pG-IWY"/>
+                            <constraint firstItem="x3X-xd-iWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="AG2-tW-fBN"/>
+                            <constraint firstItem="PSW-KS-10I" firstAttribute="top" secondItem="ytl-zm-W4D" secondAttribute="bottom" constant="8" id="Chn-hb-SgJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x3X-xd-iWd" secondAttribute="trailing" constant="12" id="I69-Gw-ltZ"/>
+                            <constraint firstItem="ytl-zm-W4D" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LOR-x8-tGd"/>
+                            <constraint firstItem="PSW-KS-10I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SFW-MH-eTr"/>
+                            <constraint firstItem="PSW-KS-10I" firstAttribute="top" secondItem="WRL-VY-q7N" secondAttribute="bottom" constant="144" id="XdB-hw-DPP"/>
+                            <constraint firstItem="ytl-zm-W4D" firstAttribute="top" secondItem="WRL-VY-q7N" secondAttribute="bottom" constant="8" id="aK2-If-fH2"/>
+                            <constraint firstItem="WRL-VY-q7N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oyn-S6-dTz"/>
+                            <constraint firstItem="x3X-xd-iWd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wZZ-O1-qYa"/>
+                            <constraint firstItem="WRL-VY-q7N" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="y0p-ah-kXd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="iconImageView" destination="ytl-zm-W4D" id="Mca-GD-9hf"/>
+                        <outlet property="weatherDisplay" destination="x3X-xd-iWd" id="0zs-zD-RGT"/>
+                        <outlet property="zipCodeText" destination="WRL-VY-q7N" id="5I6-TR-nnM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133" y="123"/>
         </scene>
     </scenes>
 </document>
